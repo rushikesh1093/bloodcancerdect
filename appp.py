@@ -1,8 +1,15 @@
 import streamlit as st
-import tensorflow
+# import tensorflow
 from tensorflow.keras.models import load_model
 import numpy as np
 from PIL import Image
+import streamlit as st
+
+if not st.button("Install TensorFlow"):
+    pass
+else:
+    !pip install tensorflow
+    st.success("TensorFlow installed successfully!")
 
 # Load the pre-trained model
 model = load_model('final1_model.h5')
